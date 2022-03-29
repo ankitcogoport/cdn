@@ -5,10 +5,10 @@ var head = document.getElementsByTagName("HEAD")[0];
 var link = document.createElement("link");
 link.rel = "stylesheet";
 link.type = "text/css";
-link.href = "http://localhost:5500/style.css";
+link.href = "https://ankitcogoport.github.io/cdn/style.css";
 head.appendChild(link);
 
-const api_url = `http://localhost:8000/api/v1/form/${search_id}`;
+const api_url = `https://cms.cogoport.io/api/v1/form/${search_id}`;
 
 var form = document.createElement("form");
 form.setAttribute("id", "cdn_form");
