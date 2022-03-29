@@ -292,7 +292,7 @@ function show(data) {
 
     console.log("Form Entries", result);
     const response = await fetch(
-      `http://localhost:8000/api/v1/form/content/${slug}`,
+      `https://cms.cogoport.io/api/v1/form/content/${slug}`,
       {
         method: "POST",
         body: JSON.stringify({ data: result }),
