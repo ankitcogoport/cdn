@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 16px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.form__label {
+  margin: 20px 0 5px;
+  font-family: "Lato", sans-serif;
+  color: #223127;
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.form__input {
+  display: block;
+  width: 100%;
+  padding: 6px 5px;
+}
+
+.form {
+  padding: 20px 0;
+}
+
+.form-card-container {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  perspective: 300px;
+
+  @media screen and (min-width: 40em) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.form__button {
+  /* float: right; */
+  padding: 6px 10px;
+  margin: 20px 5px;
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  color: #223127;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  background-color: rgb(230, 227, 227);
+}
+
+.form__input__options {
+  font-family: "Lato", sans-serif;
+  color: #223127;
+  display: block;
+  padding: 6px 5px;
+}
+
+.select__box {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #60666d;
+}
+
+select {
+  /* appearance: none; */
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  z-index: 1;
+  outline: none;
+}
+
+.select {
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+  position: relative;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(#777);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  border: 1px solid black;
+}
